@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75615D30-1905-4903-AB88-E5BF4574C9AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MureOcart</RootNamespace>
+    <AssemblyName>MureOcart</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\MureCartClient\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\MureCartClient\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_category.designer.cs">
+      <DependentUpon>frmoc_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_category_description.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_category_description.designer.cs">
+      <DependentUpon>frmoc_category_description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_category_path.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_category_path.designer.cs">
+      <DependentUpon>frmoc_category_path.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_category_to_store.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_category_to_store.designer.cs">
+      <DependentUpon>frmoc_category_to_store.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_order.designer.cs">
+      <DependentUpon>frmoc_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_order_history.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_order_history.designer.cs">
+      <DependentUpon>frmoc_order_history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_order_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_order_product.designer.cs">
+      <DependentUpon>frmoc_order_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_order_total.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_order_total.designer.cs">
+      <DependentUpon>frmoc_order_total.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_product.designer.cs">
+      <DependentUpon>frmoc_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_product_description.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_product_description.designer.cs">
+      <DependentUpon>frmoc_product_description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_product_special.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_product_special.designer.cs">
+      <DependentUpon>frmoc_product_special.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_product_to_category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_product_to_category.designer.cs">
+      <DependentUpon>frmoc_product_to_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_product_to_store.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_product_to_store.designer.cs">
+      <DependentUpon>frmoc_product_to_store.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmoc_url_alias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmoc_url_alias.designer.cs">
+      <DependentUpon>frmoc_url_alias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1EntitiesProcs.cs" />
+    <Compile Include="MyDateTimePickerColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="oc_category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_category_description.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_category_path.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_category_to_store.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_order.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_order_history.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_order_product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_order_total.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_product.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_product_description.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_product_special.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_product_to_category.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_product_to_store.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="oc_url_alias.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_category.resx">
+      <DependentUpon>frmoc_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_category_description.resx">
+      <DependentUpon>frmoc_category_description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_category_path.resx">
+      <DependentUpon>frmoc_category_path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_category_to_store.resx">
+      <DependentUpon>frmoc_category_to_store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_order.resx">
+      <DependentUpon>frmoc_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_order_history.resx">
+      <DependentUpon>frmoc_order_history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_order_product.resx">
+      <DependentUpon>frmoc_order_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_order_total.resx">
+      <DependentUpon>frmoc_order_total.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_product.resx">
+      <DependentUpon>frmoc_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_product_description.resx">
+      <DependentUpon>frmoc_product_description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_product_special.resx">
+      <DependentUpon>frmoc_product_special.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_product_to_category.resx">
+      <DependentUpon>frmoc_product_to_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_product_to_store.resx">
+      <DependentUpon>frmoc_product_to_store.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmoc_url_alias.resx">
+      <DependentUpon>frmoc_url_alias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="connections.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorAddNewItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorDeleteItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorMoveFirstItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorMoveLastItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorMoveNextItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorMovePreviousItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bindingNavigatorSaveItem.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
