@@ -29,106 +29,140 @@ namespace MureOcart
         }
 
 
-    private void frmoc_categoryToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_category f = new frmoc_category();
-      f.Show();
-    }
-
-    private void frmoc_category_descriptionToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_category_description f = new frmoc_category_description();
-      f.Show();
-    }
-
-    private void frmoc_category_pathToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_category_path f = new frmoc_category_path();
-      f.Show();
-    }
-
-    private void frmoc_category_to_storeToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_category_to_store f = new frmoc_category_to_store();
-      f.Show();
-    }
-
-    private void frmoc_orderToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_order f = new frmoc_order();
-      f.Show();
-    }
-
-    private void frmoc_order_historyToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_order_history f = new frmoc_order_history();
-      f.Show();
-    }
-
-    private void frmoc_order_productToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_order_product f = new frmoc_order_product();
-      f.Show();
-    }
-
-    private void frmoc_order_totalToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_order_total f = new frmoc_order_total();
-      f.Show();
-    }
-
-    private void frmoc_productToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_product f = new frmoc_product();
-      f.Show();
-    }
-
-    private void frmoc_product_descriptionToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_product_description f = new frmoc_product_description();
-      f.Show();
-    }
-
-    private void frmoc_product_specialToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_product_special f = new frmoc_product_special();
-      f.Show();
-    }
-
-    private void frmoc_product_to_categoryToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_product_to_category f = new frmoc_product_to_category();
-      f.Show();
-    }
-
-    private void frmoc_product_to_storeToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_product_to_store f = new frmoc_product_to_store();
-      f.Show();
-    }
-
-    private void frmoc_url_aliasToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-      frmoc_url_alias f = new frmoc_url_alias();
-      f.Show();
-    }
-
-    private void button1_Click(object sender, EventArgs e)
-    {
-        var model = new Model1Entities();
-        try
+        private void frmoc_categoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var prodid = int.Parse(textBox1.Text);
-            var stock = int.Parse(textBox2.Text);
-            model.SetStock(prodid,stock);
-            var yx = "";
-        }
-        catch (Exception ex)
-        {
-            var xy = ex;
+          frmoc_category f = new frmoc_category();
+          f.Show();
         }
 
-    }
+        private void frmoc_category_descriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_category_description f = new frmoc_category_description();
+          f.Show();
+        }
+
+        private void frmoc_category_pathToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_category_path f = new frmoc_category_path();
+          f.Show();
+        }
+
+        private void frmoc_category_to_storeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_category_to_store f = new frmoc_category_to_store();
+          f.Show();
+        }
+
+        private void frmoc_orderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_order f = new frmoc_order();
+          f.Show();
+        }
+
+        private void frmoc_order_historyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_order_history f = new frmoc_order_history();
+          f.Show();
+        }
+
+        private void frmoc_order_productToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_order_product f = new frmoc_order_product();
+          f.Show();
+        }
+
+        private void frmoc_order_totalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_order_total f = new frmoc_order_total();
+          f.Show();
+        }
+
+        private void frmoc_productToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_product f = new frmoc_product();
+          f.Show();
+        }
+
+        private void frmoc_product_descriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_product_description f = new frmoc_product_description();
+          f.Show();
+        }
+
+        private void frmoc_product_specialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_product_special f = new frmoc_product_special();
+          f.Show();
+        }
+
+        private void frmoc_product_to_categoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_product_to_category f = new frmoc_product_to_category();
+          f.Show();
+        }
+
+        private void frmoc_product_to_storeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_product_to_store f = new frmoc_product_to_store();
+          f.Show();
+        }
+
+        private void frmoc_url_aliasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          frmoc_url_alias f = new frmoc_url_alias();
+          f.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var model = new Model1Entities();
+            try
+            {
+                var prodid = int.Parse(textBox1.Text);
+                var stock = int.Parse(textBox2.Text);
+                model.SetStock(prodid,stock);
+                MessageBox.Show("Hecho");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var model = new Model1Entities();
+            try
+            {
+                var prodid = int.Parse(agpc_idprod.Text);
+                var categid = int.Parse(agpc_idcateg.Text);
+                model.AgregarProdCateg(prodid, categid);
+                MessageBox.Show("Hecho");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void agregarCateg_Click(object sender, EventArgs e)
+        {
+            var model = new Model1Entities();
+            try
+            {
+                var categid = int.Parse(agc_idcateg.Text);
+                var categidpadre = int.Parse(agc_idcategpadre.Text);
+
+                model.AgregarCategoria(categid, categidpadre, agc_nombre.Text, agc_desc.Text,
+                    agc_metadesc.Text, agc_metakeys.Text, agc_imagen.Text);
+                MessageBox.Show("Hecho");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
 
     }
 }
