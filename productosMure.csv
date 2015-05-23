@@ -1,0 +1,4 @@
+productid,productmodel,productsku,stock,productimage,productname,productdescription,productmetadesc,productmetakeys,producttags,productprice,productpath
+9901,Modelo 9901,9901-1,10,data/demo/htc_touch_hd_1.jpg,Prod 9901,desc del prod 9901,9901desc,"9901keys","tagprod9901",100,9901-prod9901
+9902,Modelo 9902,9901-2,10,data/demo/htc_touch_hd_1.jpg,Prod 9902,desc del prod 9902,9902desc,"9902keys","tagprod9902",100,9902-prod9902
+9903,Modelo 9903,9901-3,10,data/demo/htc_touch_hd_1.jpg,Prod 9903,desc del prod 9903,9903desc,"9903keys",tag9903,100,9903-prod9903

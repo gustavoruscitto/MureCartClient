@@ -83,10 +83,35 @@ namespace MureOcart
             this.agc_metadesc = new System.Windows.Forms.TextBox();
             this.agc_metakeys = new System.Windows.Forms.TextBox();
             this.agc_imagen = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.agregarImagenProd = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.agip_idprod = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.agip_imagen = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.agregarProductos = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.Orden = new System.Windows.Forms.Label();
+            this.agip_orden = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.actualizarOrden = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.ao_orderId = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.ao_status = new System.Windows.Forms.TextBox();
+            this.ao_comentario = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ap_archivo = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -95,7 +120,7 @@ namespace MureOcart
             this.formsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(858, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(959, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -241,6 +266,7 @@ namespace MureOcart
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(70, 20);
             this.textBox2.TabIndex = 3;
+            this.textBox2.Text = "10";
             // 
             // label1
             // 
@@ -267,7 +293,7 @@ namespace MureOcart
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Location = new System.Drawing.Point(651, 236);
+            this.groupBox1.Location = new System.Drawing.Point(542, 273);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(181, 157);
             this.groupBox1.TabIndex = 6;
@@ -281,9 +307,9 @@ namespace MureOcart
             this.groupBox2.Controls.Add(this.agpc_idprod);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.agpc_idcateg);
-            this.groupBox2.Location = new System.Drawing.Point(651, 50);
+            this.groupBox2.Location = new System.Drawing.Point(741, 39);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(181, 157);
+            this.groupBox2.Size = new System.Drawing.Size(206, 157);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Agregar prod a categoria";
@@ -301,7 +327,7 @@ namespace MureOcart
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 74);
+            this.label3.Location = new System.Drawing.Point(15, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 5;
@@ -317,7 +343,7 @@ namespace MureOcart
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 33);
+            this.label4.Location = new System.Drawing.Point(15, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 4;
@@ -477,11 +503,217 @@ namespace MureOcart
             this.agc_imagen.Size = new System.Drawing.Size(132, 20);
             this.agc_imagen.TabIndex = 15;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.agip_orden);
+            this.groupBox4.Controls.Add(this.Orden);
+            this.groupBox4.Controls.Add(this.agregarImagenProd);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.agip_idprod);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.agip_imagen);
+            this.groupBox4.Location = new System.Drawing.Point(542, 39);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(181, 207);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Agregar img a producto";
+            // 
+            // agregarImagenProd
+            // 
+            this.agregarImagenProd.Location = new System.Drawing.Point(55, 151);
+            this.agregarImagenProd.Name = "agregarImagenProd";
+            this.agregarImagenProd.Size = new System.Drawing.Size(70, 23);
+            this.agregarImagenProd.TabIndex = 1;
+            this.agregarImagenProd.Text = "Agregar";
+            this.agregarImagenProd.UseVisualStyleBackColor = true;
+            this.agregarImagenProd.Click += new System.EventHandler(this.agregarImagenProd_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(8, 74);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(42, 13);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Imagen";
+            // 
+            // agip_idprod
+            // 
+            this.agip_idprod.Location = new System.Drawing.Point(55, 30);
+            this.agip_idprod.Name = "agip_idprod";
+            this.agip_idprod.Size = new System.Drawing.Size(70, 20);
+            this.agip_idprod.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Id Prod";
+            // 
+            // agip_imagen
+            // 
+            this.agip_imagen.Location = new System.Drawing.Point(55, 71);
+            this.agip_imagen.Name = "agip_imagen";
+            this.agip_imagen.Size = new System.Drawing.Size(120, 20);
+            this.agip_imagen.TabIndex = 3;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.button3);
+            this.groupBox5.Controls.Add(this.ap_archivo);
+            this.groupBox5.Controls.Add(this.agregarProductos);
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Location = new System.Drawing.Point(276, 39);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(248, 233);
+            this.groupBox5.TabIndex = 10;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Agregar producto";
+            // 
+            // agregarProductos
+            // 
+            this.agregarProductos.Enabled = false;
+            this.agregarProductos.Location = new System.Drawing.Point(19, 125);
+            this.agregarProductos.Name = "agregarProductos";
+            this.agregarProductos.Size = new System.Drawing.Size(118, 23);
+            this.agregarProductos.TabIndex = 1;
+            this.agregarProductos.Text = "Agregar Productos";
+            this.agregarProductos.UseVisualStyleBackColor = true;
+            this.agregarProductos.Click += new System.EventHandler(this.agregarProductos_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(16, 33);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(62, 13);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "archivo csv";
+            // 
+            // Orden
+            // 
+            this.Orden.AutoSize = true;
+            this.Orden.Location = new System.Drawing.Point(8, 114);
+            this.Orden.Name = "Orden";
+            this.Orden.Size = new System.Drawing.Size(36, 13);
+            this.Orden.TabIndex = 6;
+            this.Orden.Text = "Orden";
+            // 
+            // agip_orden
+            // 
+            this.agip_orden.Location = new System.Drawing.Point(55, 111);
+            this.agip_orden.Name = "agip_orden";
+            this.agip_orden.Size = new System.Drawing.Size(70, 20);
+            this.agip_orden.TabIndex = 7;
+            this.agip_orden.Text = "1";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label23);
+            this.groupBox6.Controls.Add(this.ao_comentario);
+            this.groupBox6.Controls.Add(this.actualizarOrden);
+            this.groupBox6.Controls.Add(this.label21);
+            this.groupBox6.Controls.Add(this.ao_orderId);
+            this.groupBox6.Controls.Add(this.label22);
+            this.groupBox6.Controls.Add(this.ao_status);
+            this.groupBox6.Location = new System.Drawing.Point(741, 226);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(206, 207);
+            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Actualizar Orden";
+            // 
+            // actualizarOrden
+            // 
+            this.actualizarOrden.Location = new System.Drawing.Point(71, 160);
+            this.actualizarOrden.Name = "actualizarOrden";
+            this.actualizarOrden.Size = new System.Drawing.Size(70, 23);
+            this.actualizarOrden.TabIndex = 1;
+            this.actualizarOrden.Text = "Actualizar";
+            this.actualizarOrden.UseVisualStyleBackColor = true;
+            this.actualizarOrden.Click += new System.EventHandler(this.actualizarOrden_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(11, 74);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(37, 13);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Status";
+            // 
+            // ao_orderId
+            // 
+            this.ao_orderId.Location = new System.Drawing.Point(71, 30);
+            this.ao_orderId.Name = "ao_orderId";
+            this.ao_orderId.Size = new System.Drawing.Size(70, 20);
+            this.ao_orderId.TabIndex = 2;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(11, 33);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(48, 13);
+            this.label22.TabIndex = 4;
+            this.label22.Text = "Id Orden";
+            // 
+            // ao_status
+            // 
+            this.ao_status.Location = new System.Drawing.Point(71, 71);
+            this.ao_status.Name = "ao_status";
+            this.ao_status.Size = new System.Drawing.Size(70, 20);
+            this.ao_status.TabIndex = 3;
+            // 
+            // ao_comentario
+            // 
+            this.ao_comentario.Location = new System.Drawing.Point(71, 114);
+            this.ao_comentario.Name = "ao_comentario";
+            this.ao_comentario.Size = new System.Drawing.Size(120, 20);
+            this.ao_comentario.TabIndex = 8;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(11, 117);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(60, 13);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Comentario";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // ap_archivo
+            // 
+            this.ap_archivo.Location = new System.Drawing.Point(19, 59);
+            this.ap_archivo.Name = "ap_archivo";
+            this.ap_archivo.Size = new System.Drawing.Size(223, 20);
+            this.ap_archivo.TabIndex = 5;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(19, 85);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(118, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Elegir Archivo";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 405);
+            this.ClientSize = new System.Drawing.Size(959, 464);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -497,6 +729,12 @@ namespace MureOcart
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -548,6 +786,28 @@ namespace MureOcart
     private System.Windows.Forms.TextBox agc_idcateg;
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.TextBox agc_idcategpadre;
+    private System.Windows.Forms.GroupBox groupBox4;
+    private System.Windows.Forms.TextBox agip_orden;
+    private System.Windows.Forms.Label Orden;
+    private System.Windows.Forms.Button agregarImagenProd;
+    private System.Windows.Forms.Label label12;
+    private System.Windows.Forms.TextBox agip_idprod;
+    private System.Windows.Forms.Label label13;
+    private System.Windows.Forms.TextBox agip_imagen;
+    private System.Windows.Forms.GroupBox groupBox5;
+    private System.Windows.Forms.Button agregarProductos;
+    private System.Windows.Forms.Label label20;
+    private System.Windows.Forms.GroupBox groupBox6;
+    private System.Windows.Forms.Label label23;
+    private System.Windows.Forms.TextBox ao_comentario;
+    private System.Windows.Forms.Button actualizarOrden;
+    private System.Windows.Forms.Label label21;
+    private System.Windows.Forms.TextBox ao_orderId;
+    private System.Windows.Forms.Label label22;
+    private System.Windows.Forms.TextBox ao_status;
+    private System.Windows.Forms.Button button3;
+    private System.Windows.Forms.TextBox ap_archivo;
+    private System.Windows.Forms.OpenFileDialog openFileDialog1;
 
     }
 }

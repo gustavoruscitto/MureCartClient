@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -164,5 +165,81 @@ namespace MureOcart
             }
         }
 
+        private void agregarImagenProd_Click(object sender, EventArgs e)
+        {
+            var model = new Model1Entities();
+            try
+            {
+                var prodid = int.Parse(agip_idprod.Text);
+                var orden = int.Parse(agip_orden.Text);
+                model.AgregarImagenProd(prodid, agip_imagen.Text, orden);
+                MessageBox.Show("Hecho");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void actualizarOrden_Click(object sender, EventArgs e)
+        {
+            var model = new Model1Entities();
+            try
+            {
+                var orderid = int.Parse(ao_orderId.Text);
+                var status = int.Parse(ao_status.Text);
+                model.ActualizarOrden(orderid, status, ao_comentario.Text);
+                MessageBox.Show("Hecho");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void agregarProductos_Click(object sender, EventArgs e)
+        {
+            var model = new Model1Entities(); 
+            string file = openFileDialog1.FileName;
+            try
+            {
+                string text = File.ReadAllText(file);
+                var lineas = text.Split('\n');
+                foreach (var linea in lineas.Skip(1))
+                {
+                    var campos = csvParser(linea);
+                    var x = campos;
+                    model.AgregarProducto(campos.ToArray());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+        }
+
+        private IEnumerable<string> csvParser(string csv, char separator = ',')
+        {
+            var fields = csv.Split(separator);
+            return fields.Select(x => x.Trim().Replace("\"","")).ToArray();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "archivos csv (*.csv)|*.csv";
+            openFileDialog1.FileName = "";
+            openFileDialog1.InitialDirectory = System.AppDomain.CurrentDomain.BaseDirectory;
+            DialogResult result = openFileDialog1.ShowDialog();
+            
+            if (result == DialogResult.OK) // Test result.
+            {
+                agregarProductos.Enabled = true;
+                ap_archivo.Text = openFileDialog1.FileName;
+            }
+            else
+                agregarProductos.Enabled = false;
+
+        }
     }
 }
